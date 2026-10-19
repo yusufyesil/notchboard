@@ -33,8 +33,6 @@
   <img src="docs/images/closed.svg" width="760" alt="Notchboard closed in the menu bar: a sad pixel creature, two project logos stacked, a red 1 for a failed routine and orange dots for a chat at work">
 </p>
 
-<p align="center"><sub><b>Closed:</b> the most urgent project's critter, the projects that want a look, and what's failing or working.</sub></p>
-
 <p align="center">
   <img src="docs/images/preview.svg" width="760" alt="Notchboard open under the notch: an Attention card with a failed routine, then chats grouped by project with logos, pixel creatures and a profile badge">
 </p>

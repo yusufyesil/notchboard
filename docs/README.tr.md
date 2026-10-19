@@ -16,8 +16,6 @@
   <img src="images/closed.svg" width="760" alt="Notchboard menü çubuğunda kapalı: üzgün piksel yaratık, üst üste iki proje logosu, başarısız rutin için kırmızı 1, çalışan sohbet için turuncu noktalar">
 </p>
 
-<p align="center"><sub><b>Kapalıyken:</b> en acil projenin yaratığı, bakılması gereken projeler, düşen ve çalışan işler.</sub></p>
-
 <p align="center">
   <img src="images/preview.svg" width="760" alt="Notchboard açık hali: Dikkat kartı, projeye göre gruplu sohbetler, logolar ve piksel yaratıklar">
 </p>
