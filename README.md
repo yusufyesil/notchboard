@@ -96,7 +96,7 @@ launchctl bootout gui/$(id -u)/app.notchboard
 
 ### 👥 Every Claude profile in one list
 
-Run several copies of Claude Desktop with Claude Profiles, say a work and a personal account? Notchboard finds each one and merges them into one list.
+Run several Claude Desktop accounts side by side with [Claude Profiles](https://github.com/jyito/Claude-Profiles) by jyito, say a work and a personal one? Notchboard finds each one and merges them into one list.
 
 - The same project in two profiles shows up as **one group**.
 - Rows from an extra profile carry a small **badge in that profile's Dock colour**.
@@ -213,7 +213,7 @@ defaults write app.notchboard startTab routines
 |---|---|
 | macOS | 14 Sonoma or later. Tested on macOS 27.0. |
 | Claude Desktop | Tested with 2.37337.1. |
-| Profiles | Claude Profiles copies in `~/.claude-instances`. |
+| Profiles | [Claude Profiles](https://github.com/jyito/Claude-Profiles) copies in `~/.claude-instances`. |
 | Hardware | Apple silicon and Intel; with or without a notch. |
 
 ## FAQ
@@ -259,6 +259,10 @@ It follows your macOS language order. To force it for Notchboard only: <code>def
 <br>
 That happens when the bundle is deleted while the app runs. <code>build.sh</code> stops the app first and updates it in place; use it rather than copying the app by hand.
 </details>
+
+## Acknowledgements
+
+Multi-profile support is built for [Claude Profiles](https://github.com/jyito/Claude-Profiles) by jyito, which runs several Claude Desktop accounts side by side, each as its own app. Notchboard only reads the folders it creates; if you use more than one Claude account, start there.
 
 ## Contributing
 
