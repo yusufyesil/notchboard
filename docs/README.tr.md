@@ -13,10 +13,16 @@
 <p align="center"><a href="../README.md">English</a> · Türkçe</p>
 
 <p align="center">
+  <img src="images/closed.svg" width="760" alt="Notchboard menü çubuğunda kapalı: üzgün piksel yaratık, üst üste iki proje logosu, başarısız rutin için kırmızı 1, çalışan sohbet için turuncu noktalar">
+</p>
+
+<p align="center"><sub><b>Kapalıyken:</b> en acil projenin yaratığı, bakılması gereken projeler, düşen ve çalışan işler.</sub></p>
+
+<p align="center">
   <img src="images/preview.svg" width="760" alt="Notchboard açık hali: Dikkat kartı, projeye göre gruplu sohbetler, logolar ve piksel yaratıklar">
 </p>
 
-<p align="center"><sub>Örnek verilerle çizim; arayüz İngilizce ve Türkçe.</sub></p>
+<p align="center"><sub><b>Üstüne gelince açılır:</b> sorunlar en üstte, gerisi projeye göre gruplu. Örnek verilerle çizim; arayüz İngilizce ve Türkçe.</sub></p>
 
 MacBook çentiğinde duran küçük bir Claude Desktop kontrol paneli: zamanlanmış rutinler ve devam eden sohbetler.
 
