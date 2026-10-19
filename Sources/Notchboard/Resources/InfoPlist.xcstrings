@@ -1,0 +1,16 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "NSAppleEventsUsageDescription": {
+      "localizations": {
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tıkladığın sohbeti doğru Claude profilinde açmak için."
+          }
+        }
+      }
+    }
+  }
+}

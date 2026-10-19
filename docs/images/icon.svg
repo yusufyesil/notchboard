@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a2e"/><stop offset="1" stop-color="#0b0b0d"/></linearGradient></defs>
+<rect x="8" y="8" width="240" height="240" rx="56" fill="url(#g)"/>
+<rect x="8.5" y="8.5" width="239" height="239" rx="55.5" fill="none" stroke="rgba(255,255,255,0.08)"/>
+<path d="M78 8 h100 v14 a18 18 0 0 1 -18 18 h-64 a18 18 0 0 1 -18 -18 z" fill="#000"/>
+<rect shape-rendering="crispEdges" x="86.0" y="96.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="100.0" y="96.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="96.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="96.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="142.0" y="96.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="96.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="72.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="86.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="100.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="142.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="170.0" y="110.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="72.0" y="124.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="86.0" y="124.0" width="14" height="14" fill="#0a0a0a"/>
+<rect shape-rendering="crispEdges" x="100.0" y="124.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="124.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="124.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="142.0" y="124.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="124.0" width="14" height="14" fill="#0a0a0a"/>
+<rect shape-rendering="crispEdges" x="170.0" y="124.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="72.0" y="138.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="86.0" y="138.0" width="14" height="14" fill="#0a0a0a"/>
+<rect shape-rendering="crispEdges" x="100.0" y="138.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="138.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="138.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="142.0" y="138.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="138.0" width="14" height="14" fill="#0a0a0a"/>
+<rect shape-rendering="crispEdges" x="170.0" y="138.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="72.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="86.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="100.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="142.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="170.0" y="152.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="72.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="86.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="100.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="142.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="170.0" y="166.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="86.0" y="180.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="114.0" y="180.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="128.0" y="180.0" width="14" height="14" fill="#5dcaa5"/>
+<rect shape-rendering="crispEdges" x="156.0" y="180.0" width="14" height="14" fill="#5dcaa5"/>
+</svg>
