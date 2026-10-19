@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/preview.svg" width="760" alt="Notchboard open under the notch: an Attention card with a failed routine and a chat waiting for a reply, then chats grouped by project with logos, pixel creatures and a profile badge">
+  <img src="docs/images/preview.svg" width="760" alt="Notchboard open under the notch: an Attention card with a failed routine, then chats grouped by project with logos, pixel creatures and a profile badge">
 </p>
 
 <p align="center"><sub>Illustration with sample data.</sub></p>
