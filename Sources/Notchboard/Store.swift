@@ -1,3 +1,4 @@
+import CoreServices
 import Foundation
 
 enum RunState: Equatable {
@@ -62,6 +63,9 @@ final class Store: ObservableObject {
 
     private var seen: [String: String] = [:]
     private var timer: Timer?
+    private var stream: FSEventStreamRef?
+    private var refreshQueued = false
+    private var lastRefresh = Date.distantPast
     private let fm = FileManager.default
     private let home = FileManager.default.homeDirectoryForCurrentUser
     private let defaults = UserDefaults.standard
@@ -75,10 +79,47 @@ final class Store: ObservableObject {
         readMarks = defaults.dictionary(forKey: "readMarks") as? [String: Double] ?? [:]
     }
 
+    /// Refreshes when Claude's files change, and every 15 seconds for what moves with
+    /// the clock alone: countdowns, missed runs, a transcript gone quiet.
     func start() {
         refresh()
         timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.refresh() }
+        }
+        watch()
+    }
+
+    /// Desktop's session files and Claude Code's transcripts, watched with FSEvents.
+    private func watch() {
+        guard !Demo.isOn else { return }
+        let paths = [Profile.main.dataDir, home.appendingPathComponent(".claude-instances"),
+                     home.appendingPathComponent(".claude/projects")].map(\.path).filter { fm.fileExists(atPath: $0) }
+        var context = FSEventStreamContext(version: 0, info: Unmanaged.passUnretained(self).toOpaque(),
+                                           retain: nil, release: nil, copyDescription: nil)
+        let callback: FSEventStreamCallback = { _, info, _, paths, _, _ in
+            guard let info, let changed = unsafeBitCast(paths, to: NSArray.self) as? [String] else { return }
+            // Electron's caches and logs change all the time; only sessions and transcripts matter.
+            guard changed.contains(where: { $0.contains("-sessions/") || $0.contains("/.claude/projects/") }) else { return }
+            let store = Unmanaged<Store>.fromOpaque(info).takeUnretainedValue()
+            MainActor.assumeIsolated { store.queueRefresh() }
+        }
+        guard let stream = FSEventStreamCreate(nil, callback, &context, paths as CFArray,
+                                               FSEventStreamEventId(kFSEventStreamEventIdSinceNow), 0.3,
+                                               FSEventStreamCreateFlags(kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents))
+        else { return }
+        FSEventStreamSetDispatchQueue(stream, .main)
+        FSEventStreamStart(stream)
+        self.stream = stream
+    }
+
+    /// At most one refresh a second: a working turn writes its transcript many times.
+    private func queueRefresh() {
+        guard !refreshQueued else { return }
+        refreshQueued = true
+        let wait = max(0, 1 - Date().timeIntervalSince(lastRefresh))
+        DispatchQueue.main.asyncAfter(deadline: .now() + wait) { [weak self] in
+            self?.refreshQueued = false
+            self?.refresh()
         }
     }
 
@@ -128,6 +169,7 @@ final class Store: ObservableObject {
     // MARK: reading
 
     func refresh() {
+        lastRefresh = Date()
         if Demo.isOn {
             (profiles, routines, chats) = Demo.data()
             checkedAt = Date()

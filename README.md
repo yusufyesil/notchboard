@@ -152,7 +152,7 @@ If you live in the terminal, one of the others is probably the better fit. If yo
 
 ## How it works
 
-Notchboard re-reads these files every 15 seconds. It only reads them; it never writes to Claude's folders.
+Notchboard re-reads these files within a second of a change (it watches them with FSEvents), and every 15 seconds for countdowns and missed runs. It only reads them; it never writes to Claude's folders.
 
 | What | Where |
 |---|---|
