@@ -9,7 +9,7 @@ cd "$(dirname "$0")"
 swift build -c release
 
 LABEL=app.notchboard
-VERSION=${VERSION:-0.2.0}
+VERSION=${VERSION:-0.2.1}
 APP="$HOME/Applications/Notchboard.app"
 AGENT="$HOME/Library/LaunchAgents/$LABEL.plist"
 
