@@ -128,6 +128,11 @@ final class Store: ObservableObject {
     // MARK: reading
 
     func refresh() {
+        if Demo.isOn {
+            (profiles, routines, chats) = Demo.data()
+            checkedAt = Date()
+            return
+        }
         var found: [String: Routine] = [:]
         var chatList: [Chat] = []
         profiles = Profiles.discover()

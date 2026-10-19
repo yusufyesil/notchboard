@@ -9,7 +9,7 @@ swift build -c release   # compile only
 ./build.sh               # compile, install to ~/Applications and restart
 ```
 
-`Notchboard --states` prints what the app reads from Claude Desktop, and `Notchboard --find-icon <folder>…` prints the logo it would pick. Both are handy for checking a change and for bug reports.
+`Notchboard --states` prints what the app reads from Claude Desktop, and `Notchboard --find-icon <folder>…` prints the logo it would pick. Both are handy for checking a change and for bug reports. For screenshots, `.build/release/Notchboard --demo` shows sample data and opens and closes on its own; please use it rather than your own chats.
 
 ## Ground rules
 

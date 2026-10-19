@@ -13,14 +13,8 @@
 <p align="center"><a href="../README.md">English</a> · Türkçe</p>
 
 <p align="center">
-  <img src="images/closed.svg" width="760" alt="Notchboard menü çubuğunda kapalı: üzgün piksel yaratık, üst üste iki proje logosu, başarısız rutin için kırmızı 1, çalışan sohbet için turuncu noktalar">
+  <img src="images/demo.gif" width="760" alt="Örnek verilerle Notchboard: menü çubuğunda kapalı hali, üstüne gelince açılan Dikkat kartı, projeye göre gruplu sohbetler ve Rutinler sekmesi">
 </p>
-
-<p align="center">
-  <img src="images/preview.svg" width="760" alt="Notchboard açık hali: Dikkat kartı, projeye göre gruplu sohbetler, logolar ve piksel yaratıklar">
-</p>
-
-<p align="center"><sub><b>Üstüne gelince açılır:</b> sorunlar en üstte, gerisi projeye göre gruplu. Örnek verilerle çizim; arayüz İngilizce ve Türkçe.</sub></p>
 
 MacBook çentiğinde duran küçük bir Claude Desktop kontrol paneli: zamanlanmış rutinler ve devam eden sohbetler.
 
@@ -54,7 +48,7 @@ Ana Claude için `~/Library/Application Support/Claude`, her profil için `~/.cl
 - `~/Library/Application Support/Claude/claude-code-sessions/*/*/scheduled-tasks.json`: rutin listesi ve cron
 - Aynı klasördeki `local_*.json`: her oturumun başlığı, son hareketi, hatası (`error`) ve özeti (`postTurnSummary`, `turnWrapUp`)
 
-Bunlar Claude Desktop'ın iç dosyaları; bir güncellemede biçimleri değişirse uygulamanın da güncellenmesi gerekir. 15 saniyede bir okunur. Bir oturumun çalışıp çalışmadığı Claude Code dökümünün (`~/.claude/projects/*/<oturum>.jsonl`) son kaydından okunur: son mesaj turu bitiren bir yanıtsa bitmiştir; araç çağrısı, araç sonucu ya da senin mesajınsa çalışıyordur. 10 dakika sessiz kalan döküm durmuş sayılır. `Notchboard --states` o anki durumları, `Notchboard --find-icon <klasör>…` her proje klasörü için bulunacak logoyu yazdırır. Onaylar ve son bakış zamanı `UserDefaults` içinde tutulur.
+Bunlar Claude Desktop'ın iç dosyaları; bir güncellemede biçimleri değişirse uygulamanın da güncellenmesi gerekir. 15 saniyede bir okunur. Bir oturumun çalışıp çalışmadığı Claude Code dökümünün (`~/.claude/projects/*/<oturum>.jsonl`) son kaydından okunur: son mesaj turu bitiren bir yanıtsa bitmiştir; araç çağrısı, araç sonucu ya da senin mesajınsa çalışıyordur. 10 dakika sessiz kalan döküm durmuş sayılır. `Notchboard --states` o anki durumları, `Notchboard --find-icon <klasör>…` her proje klasörü için bulunacak logoyu yazdırır. `.build/release/Notchboard --demo` senin verin yerine örnek verilerle açılır ve kendi kendine açılıp kapanır (README'deki kayıt böyle çekildi). Onaylar ve son bakış zamanı `UserDefaults` içinde tutulur.
 
 ## Dil
 

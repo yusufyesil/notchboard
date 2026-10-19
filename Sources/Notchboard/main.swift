@@ -36,12 +36,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         host.menu = makeMenu()
         panel.contentView = host
 
-        Notifier.shared.start()
+        if !Demo.isOn { Notifier.shared.start() }
         // `defaults write app.notchboard startTab routines` opens on that tab.
         if UserDefaults.standard.string(forKey: "startTab") == "routines" { model.tab = .routines }
         store.start()
         place()
         panel.orderFrontRegardless()
+        if Demo.isOn { playDemo(); return }
 
         if !UserDefaults.standard.bool(forKey: "setupShown") {
             UserDefaults.standard.set(true, forKey: "setupShown")
@@ -74,6 +75,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             model.notchWidth = 0
             model.barHeight = max(24, s.frame.maxY - s.visibleFrame.maxY)
         }
+        // The recording shows a MacBook's notch whatever screen it is made on.
+        if Demo.isOn { model.notchWidth = 190; model.barHeight = 32 }
         let size = model.expanded
             ? CGSize(width: NotchView.expandedWidth + 40, height: 720)
             : CGSize(width: model.notchWidth + NotchView.sideWidth * 2, height: model.barHeight)
@@ -82,6 +85,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func hover(_ inside: Bool) {
+        guard !Demo.isOn else { return }  // the demo opens and closes on its own
         collapseWork?.cancel()
         if inside {
             if hoveredSince == nil { hoveredSince = Date() }
@@ -122,6 +126,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         bannerWork = work
         DispatchQueue.main.asyncAfter(deadline: .now() + 6, execute: work)
+    }
+
+    /// The demo's loop: closed, opened on chats, the routines tab, chats again, closed.
+    private func playDemo() {
+        let steps: [(TimeInterval, () -> Void)] = [
+            (2.5, { self.model.tab = .chats; self.model.expanded = true; self.place() }),
+            (3.5, { self.model.tab = .routines }),
+            (3.5, { self.model.tab = .chats }),
+            (2.5, { self.collapse() }),
+        ]
+        var at: TimeInterval = 0
+        for (wait, step) in steps {
+            at += wait
+            DispatchQueue.main.asyncAfter(deadline: .now() + at, execute: step)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + at) { self.playDemo() }
     }
 
     private func makeMenu() -> NSMenu {

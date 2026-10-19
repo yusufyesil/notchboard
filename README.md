@@ -30,16 +30,8 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/closed.svg" width="760" alt="Notchboard closed in the menu bar: a sad pixel creature, two project logos stacked, a red 1 for a failed routine and orange dots for a chat at work">
+  <img src="docs/images/demo.gif" width="760" alt="Notchboard with sample data: closed in the menu bar with a critter, project logos and counts; on hover it opens to an Attention card with a failed routine, chats grouped by project, and the Routines tab with last and next runs">
 </p>
-
-<p align="center">
-  <img src="docs/images/preview.svg" width="760" alt="Notchboard open under the notch: an Attention card with a failed routine, then chats grouped by project with logos, pixel creatures and a profile badge">
-</p>
-
-<p align="center"><sub><b>Open on hover:</b> problems on top, everything else grouped by project. Illustrations with sample data.</sub></p>
-
-<!-- Add a short screen recording here once there is one: docs/images/demo.gif (hover the notch, switch tabs, click a chat). -->
 
 Notchboard is a small, native macOS app that lives in the notch. It reads the files Claude Desktop already keeps on your Mac and shows what your chats and scheduled routines are doing: which one is typing, which one replied, which one is waiting for you, which routine failed or never ran. Hover to see the list; click a row to jump into that chat.
 
@@ -191,6 +183,12 @@ Handy for checking what Notchboard reads, and for bug reports:
 
 # Print the logo Notchboard would pick for each project folder, then exit
 /Applications/Notchboard.app/Contents/MacOS/Notchboard --find-icon ~/code/my-app ~/code/other-app
+```
+
+Run with sample data instead of your own, opening and closing by itself (what the recording above shows). Run it from the build folder so its settings stay apart from the installed app's:
+
+```bash
+swift build -c release && .build/release/Notchboard --demo
 ```
 
 Open on the Routines tab instead of Chats:
